@@ -35,4 +35,22 @@ public class MatchData : INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
+    public void IncrementGreenGoals()
+    {
+        if (!int.TryParse(GreenGoals, out int greenGoals))
+        {
+            return;
+        }
+        GreenGoals = greenGoals++.ToString();
+    }
+
+    public void DecrementGreenGoals()
+    {
+        if (!int.TryParse(GreenGoals, out int greenGoals))
+        {
+            return;
+        }
+        GreenGoals = greenGoals--.ToString();
+    }
 }

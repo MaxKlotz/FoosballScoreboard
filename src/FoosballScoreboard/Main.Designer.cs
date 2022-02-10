@@ -36,9 +36,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.btnGreenDown = new System.Windows.Forms.Button();
+            this.BtnGreenDown = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnGreenUp = new System.Windows.Forms.Button();
+            this.BtnGreenUp = new System.Windows.Forms.Button();
             this.txtGreenTeamName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -67,9 +67,9 @@
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.btnGreenDown);
+            this.tabPage1.Controls.Add(this.BtnGreenDown);
             this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.btnGreenUp);
+            this.tabPage1.Controls.Add(this.BtnGreenUp);
             this.tabPage1.Controls.Add(this.txtGreenTeamName);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -135,15 +135,16 @@
             this.textBox4.Size = new System.Drawing.Size(183, 32);
             this.textBox4.TabIndex = 4;
             // 
-            // btnGreenDown
+            // BtnGreenDown
             // 
-            this.btnGreenDown.BackgroundImage = global::FoosballScoreboard.Properties.Resources.icons8_rangabzeichen_runter_96;
-            this.btnGreenDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGreenDown.Location = new System.Drawing.Point(62, 183);
-            this.btnGreenDown.Name = "btnGreenDown";
-            this.btnGreenDown.Size = new System.Drawing.Size(146, 32);
-            this.btnGreenDown.TabIndex = 3;
-            this.btnGreenDown.UseVisualStyleBackColor = true;
+            this.BtnGreenDown.BackgroundImage = global::FoosballScoreboard.Properties.Resources.icons8_rangabzeichen_runter_96;
+            this.BtnGreenDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnGreenDown.Location = new System.Drawing.Point(62, 183);
+            this.BtnGreenDown.Name = "BtnGreenDown";
+            this.BtnGreenDown.Size = new System.Drawing.Size(146, 32);
+            this.BtnGreenDown.TabIndex = 3;
+            this.BtnGreenDown.UseVisualStyleBackColor = true;
+            this.BtnGreenDown.Click += new System.EventHandler(this.BtnGreenDown_Click);
             // 
             // textBox2
             // 
@@ -153,15 +154,16 @@
             this.textBox2.Size = new System.Drawing.Size(146, 52);
             this.textBox2.TabIndex = 2;
             // 
-            // btnGreenUp
+            // BtnGreenUp
             // 
-            this.btnGreenUp.BackgroundImage = global::FoosballScoreboard.Properties.Resources.icons8_rangabzeichen_hoch_96;
-            this.btnGreenUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGreenUp.Location = new System.Drawing.Point(62, 87);
-            this.btnGreenUp.Name = "btnGreenUp";
-            this.btnGreenUp.Size = new System.Drawing.Size(146, 32);
-            this.btnGreenUp.TabIndex = 1;
-            this.btnGreenUp.UseVisualStyleBackColor = true;
+            this.BtnGreenUp.BackgroundImage = global::FoosballScoreboard.Properties.Resources.icons8_rangabzeichen_hoch_96;
+            this.BtnGreenUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnGreenUp.Location = new System.Drawing.Point(62, 87);
+            this.BtnGreenUp.Name = "BtnGreenUp";
+            this.BtnGreenUp.Size = new System.Drawing.Size(146, 32);
+            this.BtnGreenUp.TabIndex = 1;
+            this.BtnGreenUp.UseVisualStyleBackColor = true;
+            this.BtnGreenUp.Click += new System.EventHandler(this.BtnGreenUp_Click);
             // 
             // txtGreenTeamName
             // 
@@ -233,9 +235,9 @@
         private Button button2;
         private TextBox textBox3;
         private TextBox textBox4;
-        private Button btnGreenDown;
+        private Button BtnGreenDown;
         private TextBox textBox2;
-        private Button btnGreenUp;
+        private Button BtnGreenUp;
         private TextBox txtGreenTeamName;
         private TabPage tabPage2;
         private MenuStrip menuStrip1;

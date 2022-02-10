@@ -22,5 +22,15 @@ namespace FoosballScoreboard
                                 false,
                                 DataSourceUpdateMode.OnPropertyChanged);
         }
+
+        private void BtnGreenUp_Click(object sender, EventArgs e)
+        {
+            _matchLoader.CurrentMatch.IncrementGreenGoals();
+        }
+
+        private void BtnGreenDown_Click(object sender, EventArgs e)
+        {
+            _matchLoader.CurrentMatch.DecrementGreenGoals();
+        }
     }
 }
