@@ -9,9 +9,47 @@ namespace FoosballScoreboard.MatchLoader
 {
     internal class FileMatchLoader : IMatchLoader
     {
-        public MatchData LoadMatchAsync()
+        public MatchData CurrentMatch { get; private set; } = new MatchData();
+        private readonly FoosScoreboardSettings _settings;
+
+        public FileMatchLoader(FoosScoreboardSettings settings)
         {
-            return new MatchData();
+            _settings = settings;
+        }
+
+        public async Task<MatchData> LoadMatch()
+        {
+            var greenName = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenName"));
+            var greenGoals = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenGoals"));
+            var greenSets = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenSets"));
+            var greenTimeout = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenTimeout"));
+            var blackName = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackName"));
+            var blackGoals = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackGoals"));
+            var blackSets = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackSets"));
+            var blackTimeout = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackTimeout"));
+
+            await Task.WhenAll(greenName,
+                greenGoals,
+                greenSets,
+                greenTimeout,
+                blackName,
+                blackGoals,
+                blackSets,
+                blackTimeout);
+
+            CurrentMatch = new MatchData
+            {
+                GreenName = greenName.Result,
+                GreenGoals = greenGoals.Result,
+                GreenSets = greenSets.Result,
+                GreenTimeout = greenTimeout.Result,
+                BlackName = blackName.Result,
+                BlackGoals = blackGoals.Result,
+                BlackSets = blackSets.Result,
+                BlackTimeout = blackTimeout.Result,
+            };
+
+            return CurrentMatch;
         }
     }
 }

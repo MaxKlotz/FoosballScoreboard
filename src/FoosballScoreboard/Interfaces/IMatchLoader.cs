@@ -7,5 +7,6 @@ using System.Threading.Tasks;
 namespace FoosballScoreboard.Interfaces;
 public interface IMatchLoader
 {
-    MatchData LoadMatchAsync();
+    Task<MatchData> LoadMatch();
+    MatchData? CurrentMatch { get; }
 }

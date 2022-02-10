@@ -9,15 +9,16 @@ namespace FoosballScoreboard
         public Main(IMatchLoader matchLoader)
         {
             _matchLoader = matchLoader;
-            InitDataBinding();
             InitializeComponent();
+            InitDataBinding();
         }
 
         private void InitDataBinding()
         {
-            this.DataBindings.Add("Text",
-                                this.Food,
-                                "Name",
+            _matchLoader.LoadMatch();
+            this.txtGreenTeamName.DataBindings.Add("Text",
+                                _matchLoader.CurrentMatch,
+                                nameof(_matchLoader.CurrentMatch.GreenName),
                                 false,
                                 DataSourceUpdateMode.OnPropertyChanged);
         }

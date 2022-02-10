@@ -1,12 +1,12 @@
 ﻿namespace FoosballScoreboard.Interfaces;
 public class MatchData
 {
-    public int GreenGoals { get; set; }
-    public int GreenSets { get; set; }
-    public int GreenTimeout { get; set; }
-    public string GreenName { get; set; }
-    public int BlackGoals { get; set; }
-    public int BlackSets { get; set; }
-    public int BlackTimeout { get; set; }
-    public string BlackName { get; set; }
+    public string GreenGoals { get; set; } = String.Empty;
+    public string GreenSets { get; set; } = String.Empty;
+    public string GreenTimeout { get; set; } = String.Empty;
+    public string GreenName { get; set; } = String.Empty;
+    public string BlackGoals { get; set; } = String.Empty;
+    public string BlackSets { get; set; } = String.Empty;
+    public string BlackTimeout { get; set; } = String.Empty;
+    public string BlackName { get; set; } = String.Empty;
 }

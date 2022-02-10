@@ -36,7 +36,8 @@ namespace FoosballScoreboard
         {
 
             services.AddScoped<Main>()
-                .AddScoped<IMatchLoader, FileMatchLoader>();
+                .AddScoped<IMatchLoader, FileMatchLoader>()
+                .AddSingleton<FoosScoreboardSettings>();
         }
     }
 }

@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnResetScore = new System.Windows.Forms.Button();
+            this.btnUpdateTeamNames = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -37,13 +39,11 @@
             this.btnGreenDown = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnGreenUp = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtGreenTeamName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speicherortÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnUpdateTeamNames = new System.Windows.Forms.Button();
-            this.btnResetScore = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -70,7 +70,7 @@
             this.tabPage1.Controls.Add(this.btnGreenDown);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.btnGreenUp);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtGreenTeamName);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -78,6 +78,26 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Score";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnResetScore
+            // 
+            this.btnResetScore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnResetScore.Location = new System.Drawing.Point(446, 318);
+            this.btnResetScore.Name = "btnResetScore";
+            this.btnResetScore.Size = new System.Drawing.Size(146, 32);
+            this.btnResetScore.TabIndex = 10;
+            this.btnResetScore.Text = "Reset Score";
+            this.btnResetScore.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateTeamNames
+            // 
+            this.btnUpdateTeamNames.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdateTeamNames.Location = new System.Drawing.Point(294, 318);
+            this.btnUpdateTeamNames.Name = "btnUpdateTeamNames";
+            this.btnUpdateTeamNames.Size = new System.Drawing.Size(146, 32);
+            this.btnUpdateTeamNames.TabIndex = 9;
+            this.btnUpdateTeamNames.Text = "Update teams";
+            this.btnUpdateTeamNames.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -143,13 +163,13 @@
             this.btnGreenUp.TabIndex = 1;
             this.btnGreenUp.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtGreenTeamName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(45, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 32);
-            this.textBox1.TabIndex = 0;
+            this.txtGreenTeamName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGreenTeamName.Location = new System.Drawing.Point(45, 47);
+            this.txtGreenTeamName.Name = "txtGreenTeamName";
+            this.txtGreenTeamName.Size = new System.Drawing.Size(183, 32);
+            this.txtGreenTeamName.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -185,26 +205,6 @@
             this.speicherortÖffnenToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.speicherortÖffnenToolStripMenuItem.Text = "Speicherort öffnen";
             // 
-            // btnUpdateTeamNames
-            // 
-            this.btnUpdateTeamNames.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnUpdateTeamNames.Location = new System.Drawing.Point(294, 318);
-            this.btnUpdateTeamNames.Name = "btnUpdateTeamNames";
-            this.btnUpdateTeamNames.Size = new System.Drawing.Size(146, 32);
-            this.btnUpdateTeamNames.TabIndex = 9;
-            this.btnUpdateTeamNames.Text = "Update teams";
-            this.btnUpdateTeamNames.UseVisualStyleBackColor = true;
-            // 
-            // btnResetScore
-            // 
-            this.btnResetScore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnResetScore.Location = new System.Drawing.Point(446, 318);
-            this.btnResetScore.Name = "btnResetScore";
-            this.btnResetScore.Size = new System.Drawing.Size(146, 32);
-            this.btnResetScore.TabIndex = 10;
-            this.btnResetScore.Text = "Reset Score";
-            this.btnResetScore.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -236,7 +236,7 @@
         private Button btnGreenDown;
         private TextBox textBox2;
         private Button btnGreenUp;
-        private TextBox textBox1;
+        private TextBox txtGreenTeamName;
         private TabPage tabPage2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem dateiToolStripMenuItem;
