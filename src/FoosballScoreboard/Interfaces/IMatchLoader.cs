@@ -8,5 +8,6 @@ namespace FoosballScoreboard.Interfaces;
 public interface IMatchLoader
 {
     Task<MatchData> LoadMatch();
-    MatchData? CurrentMatch { get; }
+    Task ApplyChanges(string fieldName);
+    MatchData CurrentMatch { get; }
 }
