@@ -19,14 +19,14 @@ internal class FileMatchLoader : IMatchLoader
 
     public async Task<MatchData> LoadMatch()
     {
-        var greenName = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenName"));
-        var greenGoals = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenGoals"));
-        var greenSets = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenSets"));
-        var greenTimeout = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenTimeout"));
-        var blackName = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackName"));
-        var blackGoals = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackGoals"));
-        var blackSets = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackSets"));
-        var blackTimeout = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackTimeout"));
+        var greenName = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenName.txt"));
+        var greenGoals = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenGoals.txt"));
+        var greenSets = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenSets.txt"));
+        var greenTimeout = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenTimeouts.txt"));
+        var blackName = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackName.txt"));
+        var blackGoals = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackGoals.txt"));
+        var blackSets = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackSets.txt"));
+        var blackTimeout = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackTimeouts.txt"));
 
         await Task.WhenAll(greenName,
             greenGoals,
@@ -62,8 +62,7 @@ internal class FileMatchLoader : IMatchLoader
         ApplyChanges(e.PropertyName);
     }
 
-    public Task ApplyChanges(string changedField)
+    public void ApplyChanges(string changedField)
     {
-        throw new NotImplementedException();
     }
 }

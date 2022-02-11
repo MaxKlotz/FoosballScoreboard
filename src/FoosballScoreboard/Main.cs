@@ -16,11 +16,16 @@ namespace FoosballScoreboard
         private void InitDataBinding()
         {
             _matchLoader.LoadMatch();
-            this.txtGreenTeamName.DataBindings.Add("Text",
+
+            txtGreenTeamName.DataBindings.Add("Text",
                                 _matchLoader.CurrentMatch,
                                 nameof(_matchLoader.CurrentMatch.GreenName),
                                 false,
                                 DataSourceUpdateMode.OnPropertyChanged);
+            txtGreenGoals.DataBindings.Add("Text",
+                                _matchLoader.CurrentMatch,
+                                nameof(_matchLoader.CurrentMatch.GreenGoals),
+                                true);
         }
 
         private void BtnGreenUp_Click(object sender, EventArgs e)

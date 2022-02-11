@@ -37,7 +37,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.BtnGreenDown = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGreenGoals = new System.Windows.Forms.TextBox();
             this.BtnGreenUp = new System.Windows.Forms.Button();
             this.txtGreenTeamName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -68,7 +68,7 @@
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.BtnGreenDown);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.txtGreenGoals);
             this.tabPage1.Controls.Add(this.BtnGreenUp);
             this.tabPage1.Controls.Add(this.txtGreenTeamName);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
@@ -126,6 +126,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(146, 52);
             this.textBox3.TabIndex = 6;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
@@ -146,13 +147,14 @@
             this.BtnGreenDown.UseVisualStyleBackColor = true;
             this.BtnGreenDown.Click += new System.EventHandler(this.BtnGreenDown_Click);
             // 
-            // textBox2
+            // txtGreenGoals
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(62, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 52);
-            this.textBox2.TabIndex = 2;
+            this.txtGreenGoals.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGreenGoals.Location = new System.Drawing.Point(62, 125);
+            this.txtGreenGoals.Name = "txtGreenGoals";
+            this.txtGreenGoals.Size = new System.Drawing.Size(146, 52);
+            this.txtGreenGoals.TabIndex = 2;
+            this.txtGreenGoals.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnGreenUp
             // 
@@ -236,7 +238,7 @@
         private TextBox textBox3;
         private TextBox textBox4;
         private Button BtnGreenDown;
-        private TextBox textBox2;
+        private TextBox txtGreenGoals;
         private Button BtnGreenUp;
         private TextBox txtGreenTeamName;
         private TabPage tabPage2;
