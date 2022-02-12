@@ -1,4 +1,5 @@
 using FoosballScoreboard.Interfaces;
+using System.ComponentModel;
 
 namespace FoosballScoreboard
 {
@@ -6,16 +7,18 @@ namespace FoosballScoreboard
     {
         private readonly IMatchLoader _matchLoader;
 
+        private BackgroundWorker worker = new BackgroundWorker();
+
         public Main(IMatchLoader matchLoader)
         {
             _matchLoader = matchLoader;
+            
             InitializeComponent();
-            InitDataBinding();
         }
 
-        private void InitDataBinding()
+        private async Task InitDataBinding()
         {
-            _matchLoader.LoadMatch();
+            await _matchLoader.LoadMatch();
 
             txtGreenTeamName.DataBindings.Add("Text",
                                 _matchLoader.CurrentMatch,
@@ -36,6 +39,11 @@ namespace FoosballScoreboard
         private void BtnGreenDown_Click(object sender, EventArgs e)
         {
             _matchLoader.CurrentMatch.DecrementGreenGoals();
+        }
+
+        private async void Main_Load(object sender, EventArgs e)
+        {
+            await InitDataBinding();
         }
     }
 }
