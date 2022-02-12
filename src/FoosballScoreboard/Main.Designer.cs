@@ -1,4 +1,4 @@
-﻿namespace FoosballScoreboard
+﻿namespace FoosballScoreboard.Forms
 {
     partial class Main
     {
@@ -32,9 +32,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnResetScore = new System.Windows.Forms.Button();
             this.btnUpdateTeamNames = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.BtnBlackDown = new System.Windows.Forms.Button();
+            this.BtnBlackGoalUp = new System.Windows.Forms.Button();
+            this.TxtBlackGoals = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.BtnGreenDown = new System.Windows.Forms.Button();
             this.txtGreenGoals = new System.Windows.Forms.TextBox();
@@ -63,9 +63,9 @@
             // 
             this.tabPage1.Controls.Add(this.btnResetScore);
             this.tabPage1.Controls.Add(this.btnUpdateTeamNames);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.BtnBlackDown);
+            this.tabPage1.Controls.Add(this.BtnBlackGoalUp);
+            this.tabPage1.Controls.Add(this.TxtBlackGoals);
             this.tabPage1.Controls.Add(this.textBox4);
             this.tabPage1.Controls.Add(this.BtnGreenDown);
             this.tabPage1.Controls.Add(this.txtGreenGoals);
@@ -99,34 +99,36 @@
             this.btnUpdateTeamNames.Text = "Update teams";
             this.btnUpdateTeamNames.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnBlackDown
             // 
-            this.button1.BackgroundImage = global::FoosballScoreboard.Properties.Resources.icons8_rangabzeichen_runter_96;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(522, 181);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 32);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnBlackDown.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_runter_96;
+            this.BtnBlackDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnBlackDown.Location = new System.Drawing.Point(522, 181);
+            this.BtnBlackDown.Name = "BtnBlackDown";
+            this.BtnBlackDown.Size = new System.Drawing.Size(146, 32);
+            this.BtnBlackDown.TabIndex = 8;
+            this.BtnBlackDown.UseVisualStyleBackColor = true;
+            this.BtnBlackDown.Click += new System.EventHandler(this.BtnBlackDown_Click);
             // 
-            // button2
+            // BtnBlackGoalUp
             // 
-            this.button2.BackgroundImage = global::FoosballScoreboard.Properties.Resources.icons8_rangabzeichen_hoch_96;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(522, 85);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 32);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnBlackGoalUp.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_hoch_96;
+            this.BtnBlackGoalUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnBlackGoalUp.Location = new System.Drawing.Point(522, 85);
+            this.BtnBlackGoalUp.Name = "BtnBlackGoalUp";
+            this.BtnBlackGoalUp.Size = new System.Drawing.Size(146, 32);
+            this.BtnBlackGoalUp.TabIndex = 7;
+            this.BtnBlackGoalUp.UseVisualStyleBackColor = true;
+            this.BtnBlackGoalUp.Click += new System.EventHandler(this.BtnBlackGoalUp_Click);
             // 
-            // textBox3
+            // TxtBlackGoals
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(522, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 52);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtBlackGoals.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBlackGoals.Location = new System.Drawing.Point(522, 125);
+            this.TxtBlackGoals.Name = "TxtBlackGoals";
+            this.TxtBlackGoals.Size = new System.Drawing.Size(146, 52);
+            this.TxtBlackGoals.TabIndex = 6;
+            this.TxtBlackGoals.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
@@ -138,7 +140,7 @@
             // 
             // BtnGreenDown
             // 
-            this.BtnGreenDown.BackgroundImage = global::FoosballScoreboard.Properties.Resources.icons8_rangabzeichen_runter_96;
+            this.BtnGreenDown.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_runter_96;
             this.BtnGreenDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnGreenDown.Location = new System.Drawing.Point(62, 183);
             this.BtnGreenDown.Name = "BtnGreenDown";
@@ -158,7 +160,7 @@
             // 
             // BtnGreenUp
             // 
-            this.BtnGreenUp.BackgroundImage = global::FoosballScoreboard.Properties.Resources.icons8_rangabzeichen_hoch_96;
+            this.BtnGreenUp.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_hoch_96;
             this.BtnGreenUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnGreenUp.Location = new System.Drawing.Point(62, 87);
             this.BtnGreenUp.Name = "BtnGreenUp";
@@ -234,9 +236,9 @@
 
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox3;
+        private Button BtnBlackDown;
+        private Button BtnBlackGoalUp;
+        private TextBox TxtBlackGoals;
         private TextBox textBox4;
         private Button BtnGreenDown;
         private TextBox txtGreenGoals;

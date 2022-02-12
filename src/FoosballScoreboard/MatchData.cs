@@ -4,6 +4,9 @@ using System.Runtime.CompilerServices;
 namespace FoosballScoreboard.Interfaces;
 public class MatchData : INotifyPropertyChanged
 {
+    private static readonly Func<int, int> increment = (x) => x += 1;
+    private static readonly Func<int, int> decrement = (x) => x -= 1;
+
     private string _greenTimeout = string.Empty;
     private string _greenGoals = string.Empty;
     private string _greenSets = string.Empty;
@@ -143,23 +146,32 @@ public class MatchData : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    public void IncrementGreenGoals()
+    internal void IncrementGreenGoals()
     {
-        if (!int.TryParse(GreenGoals, out int greenGoals))
-        {
-            return;
-        }
-        greenGoals++;
-        GreenGoals = greenGoals.ToString();
+        GreenGoals = IncrementString(GreenGoals, increment);
     }
 
-    public void DecrementGreenGoals()
+    internal void DecrementGreenGoals()
     {
-        if (!int.TryParse(GreenGoals, out int greenGoals))
+        GreenGoals = IncrementString(GreenGoals, decrement);
+    }
+
+    internal void IncrementBlackGoals()
+    {
+        BlackGoals = IncrementString(BlackGoals, increment);
+    }
+
+    internal void DecrementBlackGoals()
+    {
+        BlackGoals = IncrementString(BlackGoals, decrement);
+    }
+
+    private static string IncrementString(string value, Func<int, int> operation)
+    {
+        if (!int.TryParse(value, out int parsedValue))
         {
-            return;
+            return value;
         }
-        greenGoals--;
-        GreenGoals = greenGoals.ToString();
+        return operation(parsedValue).ToString();
     }
 }

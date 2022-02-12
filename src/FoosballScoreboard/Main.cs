@@ -1,7 +1,7 @@
 using FoosballScoreboard.Interfaces;
 using System.ComponentModel;
 
-namespace FoosballScoreboard
+namespace FoosballScoreboard.Forms
 {
     public partial class Main : Form
     {
@@ -31,6 +31,11 @@ namespace FoosballScoreboard
                                 true);
         }
 
+        private async void Main_Load(object sender, EventArgs e)
+        {
+            await InitDataBinding();
+        }
+
         private void BtnGreenUp_Click(object sender, EventArgs e)
         {
             _matchLoader.CurrentMatch.IncrementGreenGoals();
@@ -41,9 +46,14 @@ namespace FoosballScoreboard
             _matchLoader.CurrentMatch.DecrementGreenGoals();
         }
 
-        private async void Main_Load(object sender, EventArgs e)
+        private void BtnBlackGoalUp_Click(object sender, EventArgs e)
         {
-            await InitDataBinding();
+            _matchLoader.CurrentMatch.IncrementBlackGoals();
+        }
+
+        private void BtnBlackDown_Click(object sender, EventArgs e)
+        {
+            _matchLoader.CurrentMatch.DecrementBlackGoals();
         }
     }
 }

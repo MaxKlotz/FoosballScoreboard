@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoosballScoreboard", "FoosballScoreboard\FoosballScoreboard.csproj", "{CA817992-F77D-4E7A-8A6C-C5D8E38DE7B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoosballScoreboard.Forms", "FoosballScoreboard\FoosballScoreboard.Forms.csproj", "{CA817992-F77D-4E7A-8A6C-C5D8E38DE7B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9EFF1B5E-C6E3-42A8-9A57-5B566161CA2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8381E9B6-1DD5-4F45-844C-81504FA17D3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoosballScoreboard.Test", "FoosballScoreboard.Test\FoosballScoreboard.Test.csproj", "{25F308D3-86FB-43FA-BA4E-9B33215297FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{CA817992-F77D-4E7A-8A6C-C5D8E38DE7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA817992-F77D-4E7A-8A6C-C5D8E38DE7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA817992-F77D-4E7A-8A6C-C5D8E38DE7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F308D3-86FB-43FA-BA4E-9B33215297FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F308D3-86FB-43FA-BA4E-9B33215297FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F308D3-86FB-43FA-BA4E-9B33215297FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F308D3-86FB-43FA-BA4E-9B33215297FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA817992-F77D-4E7A-8A6C-C5D8E38DE7B6} = {9EFF1B5E-C6E3-42A8-9A57-5B566161CA2A}
+		{25F308D3-86FB-43FA-BA4E-9B33215297FE} = {8381E9B6-1DD5-4F45-844C-81504FA17D3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7446DB5-C0C0-42C3-BF32-4F18F9AA7A3C}

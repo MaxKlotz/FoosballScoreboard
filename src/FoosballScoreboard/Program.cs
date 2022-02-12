@@ -4,7 +4,7 @@ using FoosballScoreboard.Settings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FoosballScoreboard;
+namespace FoosballScoreboard.Forms;
 internal static class Program
 {
     public static IConfiguration? Configuration;
