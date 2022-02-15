@@ -176,6 +176,26 @@ public class MatchData : INotifyPropertyChanged
         BlackGoals = IncrementString(BlackGoals, decrement);
     }
 
+    internal void IncrementGreenSets()
+    {
+        GreenSets = IncrementString(GreenSets, increment);
+    }
+
+    internal void DecrementGreenSets()
+    {
+        GreenSets = IncrementString(GreenSets, decrement);
+    
+    }
+    internal void IncrementBlackSets()
+    {
+        BlackSets = IncrementString(BlackSets, increment);
+    }
+
+    internal void DecrementBlackSets()
+    {
+        BlackSets = IncrementString(BlackSets, decrement);
+    }
+
     private static string IncrementString(string value, Func<int, int> operation)
     {
         if (!int.TryParse(value, out int parsedValue))

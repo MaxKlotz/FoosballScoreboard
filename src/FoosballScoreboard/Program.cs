@@ -34,7 +34,7 @@ internal static class Program
     {
 
         services.AddScoped<Main>()
-            .AddScoped<IMatchLoader, FileMatchLoader>()
-            .AddSingleton<FoosScoreboardSettings>();
+            .AddScoped<IMatchLoader, FileMatchLoader>();
+            
     }
 }
