@@ -123,6 +123,16 @@ public class MatchData : INotifyPropertyChanged
             }
         }
     }
+
+    internal async Task ResetScore()
+    {
+        GreenGoals = "0";
+        BlackGoals = "0";
+        GreenSets = "0";
+        BlackSets = "0";
+        await Task.FromResult(0);
+    }
+
     public string BlackName
     {
         get
