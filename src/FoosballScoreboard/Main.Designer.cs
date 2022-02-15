@@ -38,7 +38,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.BtnBlackDown = new System.Windows.Forms.Button();
             this.TxtBlackSets = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GroupBoxGreen = new System.Windows.Forms.GroupBox();
             this.TxtGreenTeamName = new System.Windows.Forms.TextBox();
             this.BtnGreenUp = new System.Windows.Forms.Button();
             this.TxtGreenGoals = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.GroupBoxGreen.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.GroupBoxGreen);
             this.tabPage1.Controls.Add(this.BtnResetScore);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
@@ -168,22 +168,22 @@
             this.TxtBlackSets.Text = "5";
             this.TxtBlackSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // groupBox1
+            // GroupBoxGreen
             // 
-            this.groupBox1.Controls.Add(this.TxtGreenTeamName);
-            this.groupBox1.Controls.Add(this.BtnGreenUp);
-            this.groupBox1.Controls.Add(this.TxtGreenGoals);
-            this.groupBox1.Controls.Add(this.BtnGreenDown);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.TxtGreenSets);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(6, 20);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 245);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Green";
+            this.GroupBoxGreen.Controls.Add(this.TxtGreenTeamName);
+            this.GroupBoxGreen.Controls.Add(this.BtnGreenUp);
+            this.GroupBoxGreen.Controls.Add(this.TxtGreenGoals);
+            this.GroupBoxGreen.Controls.Add(this.BtnGreenDown);
+            this.GroupBoxGreen.Controls.Add(this.button2);
+            this.GroupBoxGreen.Controls.Add(this.TxtGreenSets);
+            this.GroupBoxGreen.Controls.Add(this.button1);
+            this.GroupBoxGreen.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.GroupBoxGreen.Location = new System.Drawing.Point(6, 20);
+            this.GroupBoxGreen.Name = "GroupBoxGreen";
+            this.GroupBoxGreen.Size = new System.Drawing.Size(200, 245);
+            this.GroupBoxGreen.TabIndex = 17;
+            this.GroupBoxGreen.TabStop = false;
+            this.GroupBoxGreen.Text = "Green";
             // 
             // TxtGreenTeamName
             // 
@@ -316,8 +316,8 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GroupBoxGreen.ResumeLayout(false);
+            this.GroupBoxGreen.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -348,7 +348,7 @@
         private Button button2;
         private Button button1;
         private TextBox TxtGreenSets;
-        private GroupBox groupBox1;
+        private GroupBox GroupBoxGreen;
         private GroupBox groupBox2;
     }
 }
