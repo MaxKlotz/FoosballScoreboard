@@ -15,14 +15,19 @@ internal static class Program
     static void Main()
     {
         var builder = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true); 
         Configuration = builder.Build();
+
+        
 
         Application.SetHighDpiMode(HighDpiMode.SystemAware);
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
         var services = new ServiceCollection();
+        services.Configure<FoosScoreboardSettings>(Configuration.GetSection(FoosScoreboardSettings.SectionName));
+        services.AddOptions();
+
         ConfigureServices(services);
 
         using ServiceProvider serviceProvider = services.BuildServiceProvider();
@@ -34,7 +39,7 @@ internal static class Program
     {
 
         services.AddScoped<Main>()
-            .AddScoped<IMatchLoader, FileMatchLoader>();
+            .AddScoped<IMatchLoader, FileMatchLoader>() ;
             
     }
 }

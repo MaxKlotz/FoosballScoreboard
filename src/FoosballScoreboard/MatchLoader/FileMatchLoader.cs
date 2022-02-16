@@ -1,5 +1,6 @@
 ﻿using FoosballScoreboard.Interfaces;
 using FoosballScoreboard.Settings;
+using Microsoft.Extensions.Options;
 
 namespace FoosballScoreboard.MatchLoader;
 internal class FileMatchLoader : IMatchLoader
@@ -7,9 +8,9 @@ internal class FileMatchLoader : IMatchLoader
     public MatchData CurrentMatch { get; private set; } = new MatchData();
     private readonly FoosScoreboardSettings _settings;
 
-    public FileMatchLoader(FoosScoreboardSettings settings)
+    public FileMatchLoader(IOptions<FoosScoreboardSettings> settings)
     {
-        _settings = settings;
+        _settings = settings.Value;
     }
 
     public async Task<MatchData> LoadMatch()
