@@ -50,7 +50,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.speicherortÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenSavedPath = new System.Windows.Forms.ToolStripMenuItem();
             this.LblGreenGoals = new System.Windows.Forms.Label();
             this.LblGreenSets = new System.Windows.Forms.Label();
             this.LblBlackSets = new System.Windows.Forms.Label();
@@ -306,17 +306,17 @@
             // dateiToolStripMenuItem
             // 
             this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.speicherortÖffnenToolStripMenuItem});
+            this.OpenSavedPath});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
             this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.dateiToolStripMenuItem.Text = "Datei";
             // 
-            // speicherortÖffnenToolStripMenuItem
+            // OpenSavedPath
             // 
-            this.speicherortÖffnenToolStripMenuItem.Name = "speicherortÖffnenToolStripMenuItem";
-            this.speicherortÖffnenToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.speicherortÖffnenToolStripMenuItem.Text = "Speicherort öffnen";
-            this.speicherortÖffnenToolStripMenuItem.Click += new System.EventHandler(this.speicherortÖffnenToolStripMenuItem_Click);
+            this.OpenSavedPath.Name = "OpenSavedPath";
+            this.OpenSavedPath.Size = new System.Drawing.Size(180, 22);
+            this.OpenSavedPath.Text = "Speicherort öffnen";
+            this.OpenSavedPath.Click += new System.EventHandler(this.speicherortÖffnenToolStripMenuItem_Click);
             // 
             // LblGreenGoals
             // 
@@ -409,7 +409,7 @@
         private TabPage tabPage2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem dateiToolStripMenuItem;
-        private ToolStripMenuItem speicherortÖffnenToolStripMenuItem;
+        private ToolStripMenuItem OpenSavedPath;
         private Button BtnResetScore;
         private Button BtnBlackSetDown;
         private Button BtnBlackSetUp;
