@@ -10,11 +10,13 @@ public class MatchData : INotifyPropertyChanged
     private string _greenTimeout = string.Empty;
     private string _greenGoals = string.Empty;
     private string _greenSets = string.Empty;
-    private string _greenName = string.Empty;
+    private string _greenName1 = string.Empty;
+    private string _greenName2 = string.Empty;
     private string _blackGoals = string.Empty;
     private string _blackSets = string.Empty;
     private string _blackTimeout = string.Empty;
-    private string _blackName = string.Empty;
+    private string _blackName1 = string.Empty;
+    private string _blackName2 = string.Empty;
 
     public string GreenGoals
     {
@@ -62,17 +64,33 @@ public class MatchData : INotifyPropertyChanged
         }
     }
 
-    public string GreenName
+    public string GreenName1
     {
         get
         {
-            return _greenName;
+            return _greenName1;
         }
         set
         {
-            if (value != _greenName)
+            if (value != _greenName1)
             {
-                _greenName = value;
+                _greenName1 = value;
+                NotifyPropertyChanged();
+            }
+        }
+    }
+
+    public string GreenName2
+    {
+        get
+        {
+            return _greenName2;
+        }
+        set
+        {
+            if (value != _greenName2)
+            {
+                _greenName2 = value;
                 NotifyPropertyChanged();
             }
         }
@@ -133,17 +151,33 @@ public class MatchData : INotifyPropertyChanged
         await Task.FromResult(0);
     }
 
-    public string BlackName
+    public string BlackName1
     {
         get
         {
-            return _blackName;
+            return _blackName1;
         }
         set
         {
-            if (value != _blackName)
+            if (value != _blackName1)
             {
-                _blackName = value;
+                _blackName1 = value;
+                NotifyPropertyChanged();
+            }
+        }
+    }
+
+    public string BlackName2
+    {
+        get
+        {
+            return _blackName2;
+        }
+        set
+        {
+            if (value != _blackName2)
+            {
+                _blackName2 = value;
                 NotifyPropertyChanged();
             }
         }

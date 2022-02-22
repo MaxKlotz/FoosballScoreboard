@@ -35,11 +35,11 @@ internal class FileMatchLoader : IMatchLoader
 
         CurrentMatch = new MatchData
         {
-            GreenName = greenName.Result,
+            GreenName1 = greenName.Result,
             GreenGoals = greenGoals.Result,
             GreenSets = greenSets.Result,
             GreenTimeout = greenTimeout.Result,
-            BlackName = blackName.Result,
+            BlackName1 = blackName.Result,
             BlackGoals = blackGoals.Result,
             BlackSets = blackSets.Result,
             BlackTimeout = blackTimeout.Result,
