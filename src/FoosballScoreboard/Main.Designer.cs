@@ -31,7 +31,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.GroupBoxBlack = new System.Windows.Forms.GroupBox();
-            this.TxtBlackTeamName = new System.Windows.Forms.TextBox();
+            this.TxtBlackTeamName1 = new System.Windows.Forms.TextBox();
             this.TxtBlackGoals = new System.Windows.Forms.TextBox();
             this.BtnBlackSetDown = new System.Windows.Forms.Button();
             this.BtnBlackGoalUp = new System.Windows.Forms.Button();
@@ -39,7 +39,7 @@
             this.BtnBlackDown = new System.Windows.Forms.Button();
             this.TxtBlackSets = new System.Windows.Forms.TextBox();
             this.GroupBoxGreen = new System.Windows.Forms.GroupBox();
-            this.TxtGreenTeamName = new System.Windows.Forms.TextBox();
+            this.TxtGreenTeamName1 = new System.Windows.Forms.TextBox();
             this.BtnGreenUp = new System.Windows.Forms.Button();
             this.TxtGreenGoals = new System.Windows.Forms.TextBox();
             this.BtnGreenDown = new System.Windows.Forms.Button();
@@ -51,6 +51,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speicherortÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LblGreenGoals = new System.Windows.Forms.Label();
+            this.LblGreenSets = new System.Windows.Forms.Label();
+            this.LblBlackSets = new System.Windows.Forms.Label();
+            this.LblBlackGoals = new System.Windows.Forms.Label();
+            this.TxtBlackTeamName2 = new System.Windows.Forms.TextBox();
+            this.TxtGreenTeamName2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.GroupBoxBlack.SuspendLayout();
@@ -83,7 +89,10 @@
             // 
             // GroupBoxBlack
             // 
-            this.GroupBoxBlack.Controls.Add(this.TxtBlackTeamName);
+            this.GroupBoxBlack.Controls.Add(this.TxtBlackTeamName2);
+            this.GroupBoxBlack.Controls.Add(this.LblBlackSets);
+            this.GroupBoxBlack.Controls.Add(this.LblBlackGoals);
+            this.GroupBoxBlack.Controls.Add(this.TxtBlackTeamName1);
             this.GroupBoxBlack.Controls.Add(this.TxtBlackGoals);
             this.GroupBoxBlack.Controls.Add(this.BtnBlackSetDown);
             this.GroupBoxBlack.Controls.Add(this.BtnBlackGoalUp);
@@ -93,23 +102,23 @@
             this.GroupBoxBlack.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.GroupBoxBlack.Location = new System.Drawing.Point(486, 20);
             this.GroupBoxBlack.Name = "GroupBoxBlack";
-            this.GroupBoxBlack.Size = new System.Drawing.Size(200, 245);
+            this.GroupBoxBlack.Size = new System.Drawing.Size(200, 314);
             this.GroupBoxBlack.TabIndex = 18;
             this.GroupBoxBlack.TabStop = false;
             this.GroupBoxBlack.Text = "Black";
             // 
-            // TxtBlackTeamName
+            // TxtBlackTeamName1
             // 
-            this.TxtBlackTeamName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBlackTeamName.Location = new System.Drawing.Point(11, 40);
-            this.TxtBlackTeamName.Name = "TxtBlackTeamName";
-            this.TxtBlackTeamName.Size = new System.Drawing.Size(183, 32);
-            this.TxtBlackTeamName.TabIndex = 4;
+            this.TxtBlackTeamName1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBlackTeamName1.Location = new System.Drawing.Point(11, 40);
+            this.TxtBlackTeamName1.Name = "TxtBlackTeamName1";
+            this.TxtBlackTeamName1.Size = new System.Drawing.Size(183, 32);
+            this.TxtBlackTeamName1.TabIndex = 4;
             // 
             // TxtBlackGoals
             // 
             this.TxtBlackGoals.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBlackGoals.Location = new System.Drawing.Point(6, 145);
+            this.TxtBlackGoals.Location = new System.Drawing.Point(6, 211);
             this.TxtBlackGoals.Name = "TxtBlackGoals";
             this.TxtBlackGoals.Size = new System.Drawing.Size(64, 52);
             this.TxtBlackGoals.TabIndex = 6;
@@ -120,7 +129,7 @@
             // 
             this.BtnBlackSetDown.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_runter_96;
             this.BtnBlackSetDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnBlackSetDown.Location = new System.Drawing.Point(130, 190);
+            this.BtnBlackSetDown.Location = new System.Drawing.Point(130, 256);
             this.BtnBlackSetDown.Name = "BtnBlackSetDown";
             this.BtnBlackSetDown.Size = new System.Drawing.Size(64, 20);
             this.BtnBlackSetDown.TabIndex = 16;
@@ -131,7 +140,7 @@
             // 
             this.BtnBlackGoalUp.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_hoch_96;
             this.BtnBlackGoalUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnBlackGoalUp.Location = new System.Drawing.Point(6, 105);
+            this.BtnBlackGoalUp.Location = new System.Drawing.Point(6, 171);
             this.BtnBlackGoalUp.Name = "BtnBlackGoalUp";
             this.BtnBlackGoalUp.Size = new System.Drawing.Size(64, 32);
             this.BtnBlackGoalUp.TabIndex = 7;
@@ -142,7 +151,7 @@
             // 
             this.BtnBlackSetUp.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_hoch_96;
             this.BtnBlackSetUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnBlackSetUp.Location = new System.Drawing.Point(130, 124);
+            this.BtnBlackSetUp.Location = new System.Drawing.Point(130, 190);
             this.BtnBlackSetUp.Name = "BtnBlackSetUp";
             this.BtnBlackSetUp.Size = new System.Drawing.Size(64, 20);
             this.BtnBlackSetUp.TabIndex = 15;
@@ -153,7 +162,7 @@
             // 
             this.BtnBlackDown.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_runter_96;
             this.BtnBlackDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnBlackDown.Location = new System.Drawing.Point(6, 203);
+            this.BtnBlackDown.Location = new System.Drawing.Point(6, 269);
             this.BtnBlackDown.Name = "BtnBlackDown";
             this.BtnBlackDown.Size = new System.Drawing.Size(64, 32);
             this.BtnBlackDown.TabIndex = 8;
@@ -163,7 +172,7 @@
             // TxtBlackSets
             // 
             this.TxtBlackSets.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBlackSets.Location = new System.Drawing.Point(130, 150);
+            this.TxtBlackSets.Location = new System.Drawing.Point(130, 216);
             this.TxtBlackSets.Name = "TxtBlackSets";
             this.TxtBlackSets.Size = new System.Drawing.Size(64, 34);
             this.TxtBlackSets.TabIndex = 14;
@@ -172,7 +181,10 @@
             // 
             // GroupBoxGreen
             // 
-            this.GroupBoxGreen.Controls.Add(this.TxtGreenTeamName);
+            this.GroupBoxGreen.Controls.Add(this.TxtGreenTeamName2);
+            this.GroupBoxGreen.Controls.Add(this.LblGreenSets);
+            this.GroupBoxGreen.Controls.Add(this.LblGreenGoals);
+            this.GroupBoxGreen.Controls.Add(this.TxtGreenTeamName1);
             this.GroupBoxGreen.Controls.Add(this.BtnGreenUp);
             this.GroupBoxGreen.Controls.Add(this.TxtGreenGoals);
             this.GroupBoxGreen.Controls.Add(this.BtnGreenDown);
@@ -182,24 +194,24 @@
             this.GroupBoxGreen.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.GroupBoxGreen.Location = new System.Drawing.Point(6, 20);
             this.GroupBoxGreen.Name = "GroupBoxGreen";
-            this.GroupBoxGreen.Size = new System.Drawing.Size(200, 259);
+            this.GroupBoxGreen.Size = new System.Drawing.Size(200, 314);
             this.GroupBoxGreen.TabIndex = 17;
             this.GroupBoxGreen.TabStop = false;
             this.GroupBoxGreen.Text = "Green";
             // 
-            // TxtGreenTeamName
+            // TxtGreenTeamName1
             // 
-            this.TxtGreenTeamName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtGreenTeamName.Location = new System.Drawing.Point(6, 40);
-            this.TxtGreenTeamName.Name = "TxtGreenTeamName";
-            this.TxtGreenTeamName.Size = new System.Drawing.Size(183, 32);
-            this.TxtGreenTeamName.TabIndex = 0;
+            this.TxtGreenTeamName1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtGreenTeamName1.Location = new System.Drawing.Point(6, 40);
+            this.TxtGreenTeamName1.Name = "TxtGreenTeamName1";
+            this.TxtGreenTeamName1.Size = new System.Drawing.Size(183, 32);
+            this.TxtGreenTeamName1.TabIndex = 0;
             // 
             // BtnGreenUp
             // 
             this.BtnGreenUp.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_hoch_96;
             this.BtnGreenUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnGreenUp.Location = new System.Drawing.Point(6, 105);
+            this.BtnGreenUp.Location = new System.Drawing.Point(6, 171);
             this.BtnGreenUp.Name = "BtnGreenUp";
             this.BtnGreenUp.Size = new System.Drawing.Size(64, 32);
             this.BtnGreenUp.TabIndex = 1;
@@ -209,7 +221,7 @@
             // TxtGreenGoals
             // 
             this.TxtGreenGoals.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtGreenGoals.Location = new System.Drawing.Point(6, 143);
+            this.TxtGreenGoals.Location = new System.Drawing.Point(6, 209);
             this.TxtGreenGoals.Name = "TxtGreenGoals";
             this.TxtGreenGoals.Size = new System.Drawing.Size(64, 52);
             this.TxtGreenGoals.TabIndex = 2;
@@ -220,7 +232,7 @@
             // 
             this.BtnGreenDown.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_runter_96;
             this.BtnGreenDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnGreenDown.Location = new System.Drawing.Point(6, 201);
+            this.BtnGreenDown.Location = new System.Drawing.Point(6, 267);
             this.BtnGreenDown.Name = "BtnGreenDown";
             this.BtnGreenDown.Size = new System.Drawing.Size(64, 32);
             this.BtnGreenDown.TabIndex = 3;
@@ -231,7 +243,7 @@
             // 
             this.BtnGreenSetDown.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_runter_96;
             this.BtnGreenSetDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnGreenSetDown.Location = new System.Drawing.Point(125, 190);
+            this.BtnGreenSetDown.Location = new System.Drawing.Point(125, 256);
             this.BtnGreenSetDown.Name = "BtnGreenSetDown";
             this.BtnGreenSetDown.Size = new System.Drawing.Size(64, 20);
             this.BtnGreenSetDown.TabIndex = 13;
@@ -241,7 +253,7 @@
             // TxtGreenSets
             // 
             this.TxtGreenSets.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtGreenSets.Location = new System.Drawing.Point(125, 150);
+            this.TxtGreenSets.Location = new System.Drawing.Point(125, 216);
             this.TxtGreenSets.Name = "TxtGreenSets";
             this.TxtGreenSets.Size = new System.Drawing.Size(64, 34);
             this.TxtGreenSets.TabIndex = 11;
@@ -252,7 +264,7 @@
             // 
             this.BtnGreenSetUp.BackgroundImage = global::FoosballScoreboard.Forms.Properties.Resources.icons8_rangabzeichen_hoch_96;
             this.BtnGreenSetUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnGreenSetUp.Location = new System.Drawing.Point(125, 124);
+            this.BtnGreenSetUp.Location = new System.Drawing.Point(125, 190);
             this.BtnGreenSetUp.Name = "BtnGreenSetUp";
             this.BtnGreenSetUp.Size = new System.Drawing.Size(64, 20);
             this.BtnGreenSetUp.TabIndex = 12;
@@ -302,9 +314,61 @@
             // speicherortÖffnenToolStripMenuItem
             // 
             this.speicherortÖffnenToolStripMenuItem.Name = "speicherortÖffnenToolStripMenuItem";
-            this.speicherortÖffnenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.speicherortÖffnenToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.speicherortÖffnenToolStripMenuItem.Text = "Speicherort öffnen";
             this.speicherortÖffnenToolStripMenuItem.Click += new System.EventHandler(this.speicherortÖffnenToolStripMenuItem_Click);
+            // 
+            // LblGreenGoals
+            // 
+            this.LblGreenGoals.AutoSize = true;
+            this.LblGreenGoals.Location = new System.Drawing.Point(5, 140);
+            this.LblGreenGoals.Name = "LblGreenGoals";
+            this.LblGreenGoals.Size = new System.Drawing.Size(61, 28);
+            this.LblGreenGoals.TabIndex = 19;
+            this.LblGreenGoals.Text = "Goals";
+            // 
+            // LblGreenSets
+            // 
+            this.LblGreenSets.AutoSize = true;
+            this.LblGreenSets.Location = new System.Drawing.Point(125, 159);
+            this.LblGreenSets.Name = "LblGreenSets";
+            this.LblGreenSets.Size = new System.Drawing.Size(48, 28);
+            this.LblGreenSets.TabIndex = 20;
+            this.LblGreenSets.Text = "Sets";
+            // 
+            // LblBlackSets
+            // 
+            this.LblBlackSets.AutoSize = true;
+            this.LblBlackSets.Location = new System.Drawing.Point(130, 159);
+            this.LblBlackSets.Name = "LblBlackSets";
+            this.LblBlackSets.Size = new System.Drawing.Size(48, 28);
+            this.LblBlackSets.TabIndex = 22;
+            this.LblBlackSets.Text = "Sets";
+            // 
+            // LblBlackGoals
+            // 
+            this.LblBlackGoals.AutoSize = true;
+            this.LblBlackGoals.Location = new System.Drawing.Point(6, 140);
+            this.LblBlackGoals.Name = "LblBlackGoals";
+            this.LblBlackGoals.Size = new System.Drawing.Size(61, 28);
+            this.LblBlackGoals.TabIndex = 21;
+            this.LblBlackGoals.Text = "Goals";
+            // 
+            // TxtBlackTeamName2
+            // 
+            this.TxtBlackTeamName2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBlackTeamName2.Location = new System.Drawing.Point(11, 78);
+            this.TxtBlackTeamName2.Name = "TxtBlackTeamName2";
+            this.TxtBlackTeamName2.Size = new System.Drawing.Size(183, 32);
+            this.TxtBlackTeamName2.TabIndex = 22;
+            // 
+            // TxtGreenTeamName2
+            // 
+            this.TxtGreenTeamName2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtGreenTeamName2.Location = new System.Drawing.Point(6, 78);
+            this.TxtGreenTeamName2.Name = "TxtGreenTeamName2";
+            this.TxtGreenTeamName2.Size = new System.Drawing.Size(183, 32);
+            this.TxtGreenTeamName2.TabIndex = 21;
             // 
             // Main
             // 
@@ -337,11 +401,11 @@
         private Button BtnBlackDown;
         private Button BtnBlackGoalUp;
         private TextBox TxtBlackGoals;
-        private TextBox TxtBlackTeamName;
+        private TextBox TxtBlackTeamName1;
         private Button BtnGreenDown;
         private TextBox TxtGreenGoals;
         private Button BtnGreenUp;
-        private TextBox TxtGreenTeamName;
+        private TextBox TxtGreenTeamName1;
         private TabPage tabPage2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem dateiToolStripMenuItem;
@@ -355,5 +419,11 @@
         private TextBox TxtGreenSets;
         private GroupBox GroupBoxGreen;
         private GroupBox GroupBoxBlack;
+        private Label LblGreenGoals;
+        private Label LblGreenSets;
+        private Label LblBlackSets;
+        private Label LblBlackGoals;
+        private TextBox TxtBlackTeamName2;
+        private TextBox TxtGreenTeamName2;
     }
 }
