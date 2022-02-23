@@ -102,7 +102,7 @@ namespace FoosballScoreboard.Forms
             _matchLoader.CurrentMatch.DecrementBlackSets();
         }
 
-        private void speicherort÷ffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenSavedPath_Click(object sender, EventArgs e)
         {
             Process.Start(_settings.DirectoryPath);
         }

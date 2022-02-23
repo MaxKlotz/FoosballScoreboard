@@ -316,7 +316,7 @@
             this.OpenSavedPath.Name = "OpenSavedPath";
             this.OpenSavedPath.Size = new System.Drawing.Size(180, 22);
             this.OpenSavedPath.Text = "Speicherort öffnen";
-            this.OpenSavedPath.Click += new System.EventHandler(this.speicherortÖffnenToolStripMenuItem_Click);
+            this.OpenSavedPath.Click += new System.EventHandler(this.OpenSavedPath_Click);
             // 
             // LblGreenGoals
             // 
