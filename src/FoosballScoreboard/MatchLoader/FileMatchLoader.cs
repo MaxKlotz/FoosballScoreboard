@@ -44,21 +44,22 @@ internal class FileMatchLoader : IMatchLoader
             BlackSets = blackSets.Result,
             BlackTimeout = blackTimeout.Result,
         };
-        CurrentMatch.PropertyChanged += CurrentMatch_PropertyChanged;
+        CurrentMatch.PropertyChangedWithChangeset += OnCurrentMatch_PropertyChangedWithChangeset;
 
         return CurrentMatch;
     }
 
-    private void CurrentMatch_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+    private void OnCurrentMatch_PropertyChangedWithChangeset(object? sender, Forms.Interfaces.PropertyChangedWithChangesetEventArgs e)
     {
         if (string.IsNullOrEmpty(e.PropertyName))
         {
             return;
         }
-        ApplyChanges(e.PropertyName);
+        ApplyChanges(e.PropertyName, e.ChangeSet.After);
     }
 
-    public void ApplyChanges(string changedField)
+    public void ApplyChanges(string changedField, object value)
     {
+
     }
 }

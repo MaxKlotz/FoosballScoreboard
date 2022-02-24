@@ -1,7 +1,6 @@
 using FoosballScoreboard.Interfaces;
 using FoosballScoreboard.Settings;
 using Microsoft.Extensions.Options;
-using System.ComponentModel;
 using System.Diagnostics;
 
 namespace FoosballScoreboard.Forms

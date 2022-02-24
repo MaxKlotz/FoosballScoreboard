@@ -1,9 +1,14 @@
-﻿using System.ComponentModel;
+﻿using FoosballScoreboard.Forms.Interfaces;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using static FoosballScoreboard.Forms.Interfaces.INotifyPropertyChangedWithChangeSet;
 
 namespace FoosballScoreboard.Interfaces;
-public class MatchData : INotifyPropertyChanged
+public class MatchData : INotifyPropertyChangedWithChangeSet
 {
+    public event PropertyChangedEventHandler? PropertyChanged;
+    public event PropertyChangedWithChangesetEventHandler? PropertyChangedWithChangeset;
+
     private static readonly Func<int, int> increment = (x) => x += 1;
     private static readonly Func<int, int> decrement = (x) => x -= 1;
 
@@ -28,8 +33,9 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _greenGoals)
             {
+                var changeset = new PropertyChangedChangeset(_greenGoals, value);
                 _greenGoals = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
@@ -43,8 +49,9 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _greenSets)
             {
+                var changeset = new PropertyChangedChangeset(_greenSets, value);
                 _greenSets = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
@@ -58,8 +65,9 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _greenTimeout)
             {
+                var changeset = new PropertyChangedChangeset(_greenTimeout, value);
                 _greenTimeout = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
@@ -74,8 +82,9 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _greenName1)
             {
+                var changeset = new PropertyChangedChangeset(_greenName1, value);
                 _greenName1 = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
@@ -90,8 +99,9 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _greenName2)
             {
+                var changeset = new PropertyChangedChangeset(_greenName2, value);
                 _greenName2 = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
@@ -106,8 +116,9 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _blackGoals)
             {
+                var changeset = new PropertyChangedChangeset(_blackGoals, value);
                 _blackGoals = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
@@ -121,8 +132,9 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _blackSets)
             {
+                var changeset = new PropertyChangedChangeset(_blackSets, value);
                 _blackSets = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
@@ -136,19 +148,11 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _blackTimeout)
             {
+                var changeset = new PropertyChangedChangeset(_blackTimeout, value);
                 _blackTimeout = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
-    }
-
-    internal async Task ResetScore()
-    {
-        GreenGoals = "0";
-        BlackGoals = "0";
-        GreenSets = "0";
-        BlackSets = "0";
-        await Task.FromResult(0);
     }
 
     public string BlackName1
@@ -161,8 +165,9 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _blackName1)
             {
+                var changeset = new PropertyChangedChangeset(_blackName1, value);
                 _blackName1 = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
@@ -177,16 +182,25 @@ public class MatchData : INotifyPropertyChanged
         {
             if (value != _blackName2)
             {
+                var changeset = new PropertyChangedChangeset(_blackName2, value);
                 _blackName2 = value;
-                NotifyPropertyChanged();
+                NotifyPropertyChanged(changeset);
             }
         }
     }
 
-    public event PropertyChangedEventHandler? PropertyChanged;
-
-    private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+    internal async Task ResetScore()
     {
+        GreenGoals = "0";
+        BlackGoals = "0";
+        GreenSets = "0";
+        BlackSets = "0";
+        await Task.FromResult(0);
+    }
+
+    private void NotifyPropertyChanged(PropertyChangedChangeset changeset, [CallerMemberName] string propertyName = "")
+    {
+        PropertyChangedWithChangeset?.Invoke(this, new PropertyChangedWithChangesetEventArgs(propertyName, changeset));
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
