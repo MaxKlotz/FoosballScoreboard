@@ -1,5 +1,5 @@
-using FoosballScoreboard.Interfaces;
-using FoosballScoreboard.MatchLoader;
+using FoosballScoreboard.BusinessLogic.Interfaces;
+using FoosballScoreboard.BusinessLogic.MatchLoader;
 using FoosballScoreboard.Settings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

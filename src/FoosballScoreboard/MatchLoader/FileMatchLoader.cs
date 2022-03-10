@@ -1,8 +1,9 @@
-﻿using FoosballScoreboard.Interfaces;
+﻿using FoosballScoreboard.BusinessLogic.Interfaces;
+using FoosballScoreboard.Forms;
 using FoosballScoreboard.Settings;
 using Microsoft.Extensions.Options;
 
-namespace FoosballScoreboard.MatchLoader;
+namespace FoosballScoreboard.BusinessLogic.MatchLoader;
 internal class FileMatchLoader : IMatchLoader
 {
     public MatchData CurrentMatch { get; private set; } = new MatchData();
@@ -15,41 +16,36 @@ internal class FileMatchLoader : IMatchLoader
 
     public async Task<MatchData> LoadMatch()
     {
-        var greenName = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenName.txt"));
-        var greenGoals = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenGoals.txt"));
-        var greenSets = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenSets.txt"));
-        var greenTimeout = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenTimeouts.txt"));
-        var blackName = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackName.txt"));
-        var blackGoals = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackGoals.txt"));
-        var blackSets = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackSets.txt"));
-        var blackTimeout = File.ReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackTimeouts.txt"));
-
-        await Task.WhenAll(greenName,
-            greenGoals,
-            greenSets,
-            greenTimeout,
-            blackName,
-            blackGoals,
-            blackSets,
-            blackTimeout);
+        if (!Directory.Exists(_settings.DirectoryPath))
+        {
+            Directory.CreateDirectory(_settings.DirectoryPath);
+        }
+        var greenName = await FileExtensions.TryReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenName.txt"));
+        var greenGoals = await FileExtensions.TryReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenGoals.txt"));
+        var greenSets = await FileExtensions.TryReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenSets.txt"));
+        var greenTimeout = await FileExtensions.TryReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "greenTimeouts.txt"));
+        var blackName = await FileExtensions.TryReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackName.txt"));
+        var blackGoals = await FileExtensions.TryReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackGoals.txt"));
+        var blackSets = await FileExtensions.TryReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackSets.txt"));
+        var blackTimeout = await FileExtensions.TryReadAllTextAsync(Path.Combine(_settings.DirectoryPath, "blackTimeouts.txt"));
 
         CurrentMatch = new MatchData
         {
-            GreenName1 = greenName.Result,
-            GreenGoals = greenGoals.Result,
-            GreenSets = greenSets.Result,
-            GreenTimeout = greenTimeout.Result,
-            BlackName1 = blackName.Result,
-            BlackGoals = blackGoals.Result,
-            BlackSets = blackSets.Result,
-            BlackTimeout = blackTimeout.Result,
+            GreenName1 = greenName,
+            GreenGoals = greenGoals,
+            GreenSets = greenSets,
+            GreenTimeout = greenTimeout,
+            BlackName1 = blackName,
+            BlackGoals = blackGoals,
+            BlackSets = blackSets,
+            BlackTimeout = blackTimeout,
         };
         CurrentMatch.PropertyChangedWithChangeset += OnCurrentMatch_PropertyChangedWithChangeset;
 
         return CurrentMatch;
     }
 
-    private void OnCurrentMatch_PropertyChangedWithChangeset(object? sender, Forms.Interfaces.PropertyChangedWithChangesetEventArgs e)
+    private void OnCurrentMatch_PropertyChangedWithChangeset(object? sender, PropertyChangedWithChangesetEventArgs e)
     {
         if (string.IsNullOrEmpty(e.PropertyName))
         {
@@ -60,6 +56,8 @@ internal class FileMatchLoader : IMatchLoader
 
     public void ApplyChanges(string changedField, object value)
     {
-
+        var filepath = Path.Combine(_settings.DirectoryPath, changedField);
+        filepath = Path.ChangeExtension(filepath, "txt");
+        File.WriteAllText(filepath, value.ToString());
     }
 }

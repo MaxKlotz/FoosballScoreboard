@@ -1,4 +1,4 @@
-using FoosballScoreboard.Interfaces;
+using FoosballScoreboard.BusinessLogic.Interfaces;
 using FoosballScoreboard.Settings;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FoosballScoreboard.Interfaces;
+namespace FoosballScoreboard.BusinessLogic.Interfaces;
 public interface IMatchLoader
 {
     Task<MatchData> LoadMatch();

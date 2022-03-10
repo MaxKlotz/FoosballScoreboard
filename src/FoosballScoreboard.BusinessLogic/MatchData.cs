@@ -1,9 +1,8 @@
-﻿using FoosballScoreboard.Forms.Interfaces;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using static FoosballScoreboard.Forms.Interfaces.INotifyPropertyChangedWithChangeSet;
+using static FoosballScoreboard.BusinessLogic.Interfaces.INotifyPropertyChangedWithChangeSet;
 
-namespace FoosballScoreboard.Interfaces;
+namespace FoosballScoreboard.BusinessLogic.Interfaces;
 public class MatchData : INotifyPropertyChangedWithChangeSet
 {
     public event PropertyChangedEventHandler? PropertyChanged;
@@ -189,7 +188,7 @@ public class MatchData : INotifyPropertyChangedWithChangeSet
         }
     }
 
-    internal async Task ResetScore()
+    public async Task ResetScore()
     {
         GreenGoals = "0";
         BlackGoals = "0";
@@ -204,42 +203,42 @@ public class MatchData : INotifyPropertyChangedWithChangeSet
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    internal void IncrementGreenGoals()
+    public void IncrementGreenGoals()
     {
         GreenGoals = IncrementString(GreenGoals, increment);
     }
 
-    internal void DecrementGreenGoals()
+    public void DecrementGreenGoals()
     {
         GreenGoals = IncrementString(GreenGoals, decrement);
     }
 
-    internal void IncrementBlackGoals()
+    public void IncrementBlackGoals()
     {
         BlackGoals = IncrementString(BlackGoals, increment);
     }
 
-    internal void DecrementBlackGoals()
+    public void DecrementBlackGoals()
     {
         BlackGoals = IncrementString(BlackGoals, decrement);
     }
 
-    internal void IncrementGreenSets()
+    public void IncrementGreenSets()
     {
         GreenSets = IncrementString(GreenSets, increment);
     }
 
-    internal void DecrementGreenSets()
+    public void DecrementGreenSets()
     {
         GreenSets = IncrementString(GreenSets, decrement);
     
     }
-    internal void IncrementBlackSets()
+    public void IncrementBlackSets()
     {
         BlackSets = IncrementString(BlackSets, increment);
     }
 
-    internal void DecrementBlackSets()
+    public void DecrementBlackSets()
     {
         BlackSets = IncrementString(BlackSets, decrement);
     }
