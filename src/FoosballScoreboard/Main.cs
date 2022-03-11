@@ -27,6 +27,11 @@ namespace FoosballScoreboard.Forms
                                 nameof(_matchLoader.CurrentMatch.GreenName1),
                                 false,
                                 DataSourceUpdateMode.OnPropertyChanged);
+            TxtGreenTeamName2.DataBindings.Add("Text",
+                                _matchLoader.CurrentMatch,
+                                nameof(_matchLoader.CurrentMatch.GreenName2),
+                                false,
+                                DataSourceUpdateMode.OnPropertyChanged);
             TxtGreenGoals.DataBindings.Add("Text",
                                 _matchLoader.CurrentMatch,
                                 nameof(_matchLoader.CurrentMatch.GreenGoals),
@@ -39,6 +44,11 @@ namespace FoosballScoreboard.Forms
             TxtBlackTeamName1.DataBindings.Add("Text",
                                 _matchLoader.CurrentMatch,
                                 nameof(_matchLoader.CurrentMatch.BlackName1),
+                                false,
+                                DataSourceUpdateMode.OnPropertyChanged);
+            TxtBlackTeamName2.DataBindings.Add("Text",
+                                _matchLoader.CurrentMatch,
+                                nameof(_matchLoader.CurrentMatch.BlackName2),
                                 false,
                                 DataSourceUpdateMode.OnPropertyChanged);
             TxtBlackGoals.DataBindings.Add("Text",
