@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TpTournament = new System.Windows.Forms.TabPage();
-            this.BtnApplyTournament = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtCompetition = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,17 +71,19 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.TpTournament);
             this.tabControl1.Controls.Add(this.TpScore);
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(702, 411);
+            this.tabControl1.Size = new System.Drawing.Size(727, 431);
             this.tabControl1.TabIndex = 0;
             // 
             // TpTournament
             // 
-            this.TpTournament.Controls.Add(this.BtnApplyTournament);
             this.TpTournament.Controls.Add(this.label2);
             this.TpTournament.Controls.Add(this.TxtCompetition);
             this.TpTournament.Controls.Add(this.label1);
@@ -90,21 +91,10 @@
             this.TpTournament.Location = new System.Drawing.Point(4, 24);
             this.TpTournament.Name = "TpTournament";
             this.TpTournament.Padding = new System.Windows.Forms.Padding(3);
-            this.TpTournament.Size = new System.Drawing.Size(694, 383);
+            this.TpTournament.Size = new System.Drawing.Size(719, 403);
             this.TpTournament.TabIndex = 1;
             this.TpTournament.Text = "Tournament";
             this.TpTournament.UseVisualStyleBackColor = true;
-            // 
-            // BtnApplyTournament
-            // 
-            this.BtnApplyTournament.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnApplyTournament.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnApplyTournament.Location = new System.Drawing.Point(545, 340);
-            this.BtnApplyTournament.Name = "BtnApplyTournament";
-            this.BtnApplyTournament.Size = new System.Drawing.Size(146, 37);
-            this.BtnApplyTournament.TabIndex = 23;
-            this.BtnApplyTournament.Text = "Apply";
-            this.BtnApplyTournament.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -118,11 +108,13 @@
             // 
             // TxtCompetition
             // 
+            this.TxtCompetition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtCompetition.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtCompetition.Location = new System.Drawing.Point(24, 120);
             this.TxtCompetition.Name = "TxtCompetition";
-            this.TxtCompetition.Size = new System.Drawing.Size(363, 32);
-            this.TxtCompetition.TabIndex = 21;
+            this.TxtCompetition.Size = new System.Drawing.Size(388, 32);
+            this.TxtCompetition.TabIndex = 1;
             // 
             // label1
             // 
@@ -136,11 +128,13 @@
             // 
             // TxtTournamentName
             // 
+            this.TxtTournamentName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtTournamentName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtTournamentName.Location = new System.Drawing.Point(24, 48);
             this.TxtTournamentName.Name = "TxtTournamentName";
-            this.TxtTournamentName.Size = new System.Drawing.Size(668, 32);
-            this.TxtTournamentName.TabIndex = 1;
+            this.TxtTournamentName.Size = new System.Drawing.Size(693, 32);
+            this.TxtTournamentName.TabIndex = 0;
             // 
             // TpScore
             // 
@@ -150,13 +144,15 @@
             this.TpScore.Location = new System.Drawing.Point(4, 24);
             this.TpScore.Name = "TpScore";
             this.TpScore.Padding = new System.Windows.Forms.Padding(3);
-            this.TpScore.Size = new System.Drawing.Size(694, 383);
+            this.TpScore.Size = new System.Drawing.Size(719, 403);
             this.TpScore.TabIndex = 0;
             this.TpScore.Text = "Score";
             this.TpScore.UseVisualStyleBackColor = true;
             // 
             // GroupBoxBlack
             // 
+            this.GroupBoxBlack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GroupBoxBlack.Controls.Add(this.TxtBlackTeamName2);
             this.GroupBoxBlack.Controls.Add(this.LblBlackSets);
             this.GroupBoxBlack.Controls.Add(this.LblBlackGoals);
@@ -168,20 +164,22 @@
             this.GroupBoxBlack.Controls.Add(this.BtnBlackDown);
             this.GroupBoxBlack.Controls.Add(this.TxtBlackSets);
             this.GroupBoxBlack.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GroupBoxBlack.Location = new System.Drawing.Point(486, 20);
+            this.GroupBoxBlack.Location = new System.Drawing.Point(425, 20);
             this.GroupBoxBlack.Name = "GroupBoxBlack";
-            this.GroupBoxBlack.Size = new System.Drawing.Size(200, 314);
-            this.GroupBoxBlack.TabIndex = 18;
+            this.GroupBoxBlack.Size = new System.Drawing.Size(290, 377);
+            this.GroupBoxBlack.TabIndex = 1;
             this.GroupBoxBlack.TabStop = false;
             this.GroupBoxBlack.Text = "Black";
             // 
             // TxtBlackTeamName2
             // 
+            this.TxtBlackTeamName2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtBlackTeamName2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBlackTeamName2.Location = new System.Drawing.Point(11, 78);
             this.TxtBlackTeamName2.Name = "TxtBlackTeamName2";
-            this.TxtBlackTeamName2.Size = new System.Drawing.Size(183, 32);
-            this.TxtBlackTeamName2.TabIndex = 22;
+            this.TxtBlackTeamName2.Size = new System.Drawing.Size(273, 32);
+            this.TxtBlackTeamName2.TabIndex = 1;
             // 
             // LblBlackSets
             // 
@@ -203,11 +201,13 @@
             // 
             // TxtBlackTeamName1
             // 
+            this.TxtBlackTeamName1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtBlackTeamName1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBlackTeamName1.Location = new System.Drawing.Point(11, 40);
             this.TxtBlackTeamName1.Name = "TxtBlackTeamName1";
-            this.TxtBlackTeamName1.Size = new System.Drawing.Size(183, 32);
-            this.TxtBlackTeamName1.TabIndex = 4;
+            this.TxtBlackTeamName1.Size = new System.Drawing.Size(273, 32);
+            this.TxtBlackTeamName1.TabIndex = 0;
             // 
             // TxtBlackGoals
             // 
@@ -215,7 +215,7 @@
             this.TxtBlackGoals.Location = new System.Drawing.Point(6, 211);
             this.TxtBlackGoals.Name = "TxtBlackGoals";
             this.TxtBlackGoals.Size = new System.Drawing.Size(64, 52);
-            this.TxtBlackGoals.TabIndex = 6;
+            this.TxtBlackGoals.TabIndex = 3;
             this.TxtBlackGoals.Text = "5";
             this.TxtBlackGoals.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -226,7 +226,7 @@
             this.BtnBlackSetDown.Location = new System.Drawing.Point(130, 256);
             this.BtnBlackSetDown.Name = "BtnBlackSetDown";
             this.BtnBlackSetDown.Size = new System.Drawing.Size(64, 20);
-            this.BtnBlackSetDown.TabIndex = 16;
+            this.BtnBlackSetDown.TabIndex = 7;
             this.BtnBlackSetDown.UseVisualStyleBackColor = true;
             this.BtnBlackSetDown.Click += new System.EventHandler(this.BtnBlackSetDown_Click);
             // 
@@ -237,7 +237,7 @@
             this.BtnBlackGoalUp.Location = new System.Drawing.Point(6, 171);
             this.BtnBlackGoalUp.Name = "BtnBlackGoalUp";
             this.BtnBlackGoalUp.Size = new System.Drawing.Size(64, 32);
-            this.BtnBlackGoalUp.TabIndex = 7;
+            this.BtnBlackGoalUp.TabIndex = 2;
             this.BtnBlackGoalUp.UseVisualStyleBackColor = true;
             this.BtnBlackGoalUp.Click += new System.EventHandler(this.BtnBlackGoalUp_Click);
             // 
@@ -248,7 +248,7 @@
             this.BtnBlackSetUp.Location = new System.Drawing.Point(130, 190);
             this.BtnBlackSetUp.Name = "BtnBlackSetUp";
             this.BtnBlackSetUp.Size = new System.Drawing.Size(64, 20);
-            this.BtnBlackSetUp.TabIndex = 15;
+            this.BtnBlackSetUp.TabIndex = 5;
             this.BtnBlackSetUp.UseVisualStyleBackColor = true;
             this.BtnBlackSetUp.Click += new System.EventHandler(this.BtnBlackSetUp_Click);
             // 
@@ -259,7 +259,7 @@
             this.BtnBlackDown.Location = new System.Drawing.Point(6, 269);
             this.BtnBlackDown.Name = "BtnBlackDown";
             this.BtnBlackDown.Size = new System.Drawing.Size(64, 32);
-            this.BtnBlackDown.TabIndex = 8;
+            this.BtnBlackDown.TabIndex = 4;
             this.BtnBlackDown.UseVisualStyleBackColor = true;
             this.BtnBlackDown.Click += new System.EventHandler(this.BtnBlackDown_Click);
             // 
@@ -269,12 +269,14 @@
             this.TxtBlackSets.Location = new System.Drawing.Point(130, 216);
             this.TxtBlackSets.Name = "TxtBlackSets";
             this.TxtBlackSets.Size = new System.Drawing.Size(64, 34);
-            this.TxtBlackSets.TabIndex = 14;
+            this.TxtBlackSets.TabIndex = 6;
             this.TxtBlackSets.Text = "5";
             this.TxtBlackSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // GroupBoxGreen
             // 
+            this.GroupBoxGreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.GroupBoxGreen.Controls.Add(this.TxtGreenTeamName2);
             this.GroupBoxGreen.Controls.Add(this.LblGreenSets);
             this.GroupBoxGreen.Controls.Add(this.LblGreenGoals);
@@ -288,18 +290,20 @@
             this.GroupBoxGreen.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.GroupBoxGreen.Location = new System.Drawing.Point(6, 20);
             this.GroupBoxGreen.Name = "GroupBoxGreen";
-            this.GroupBoxGreen.Size = new System.Drawing.Size(200, 314);
-            this.GroupBoxGreen.TabIndex = 17;
+            this.GroupBoxGreen.Size = new System.Drawing.Size(290, 377);
+            this.GroupBoxGreen.TabIndex = 0;
             this.GroupBoxGreen.TabStop = false;
             this.GroupBoxGreen.Text = "Green";
             // 
             // TxtGreenTeamName2
             // 
+            this.TxtGreenTeamName2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtGreenTeamName2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtGreenTeamName2.Location = new System.Drawing.Point(6, 78);
             this.TxtGreenTeamName2.Name = "TxtGreenTeamName2";
-            this.TxtGreenTeamName2.Size = new System.Drawing.Size(183, 32);
-            this.TxtGreenTeamName2.TabIndex = 21;
+            this.TxtGreenTeamName2.Size = new System.Drawing.Size(273, 32);
+            this.TxtGreenTeamName2.TabIndex = 1;
             // 
             // LblGreenSets
             // 
@@ -321,10 +325,12 @@
             // 
             // TxtGreenTeamName1
             // 
+            this.TxtGreenTeamName1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtGreenTeamName1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtGreenTeamName1.Location = new System.Drawing.Point(6, 40);
             this.TxtGreenTeamName1.Name = "TxtGreenTeamName1";
-            this.TxtGreenTeamName1.Size = new System.Drawing.Size(183, 32);
+            this.TxtGreenTeamName1.Size = new System.Drawing.Size(273, 32);
             this.TxtGreenTeamName1.TabIndex = 0;
             // 
             // BtnGreenUp
@@ -334,7 +340,7 @@
             this.BtnGreenUp.Location = new System.Drawing.Point(6, 171);
             this.BtnGreenUp.Name = "BtnGreenUp";
             this.BtnGreenUp.Size = new System.Drawing.Size(64, 32);
-            this.BtnGreenUp.TabIndex = 1;
+            this.BtnGreenUp.TabIndex = 2;
             this.BtnGreenUp.UseVisualStyleBackColor = true;
             this.BtnGreenUp.Click += new System.EventHandler(this.BtnGreenUp_Click);
             // 
@@ -344,7 +350,7 @@
             this.TxtGreenGoals.Location = new System.Drawing.Point(6, 209);
             this.TxtGreenGoals.Name = "TxtGreenGoals";
             this.TxtGreenGoals.Size = new System.Drawing.Size(64, 52);
-            this.TxtGreenGoals.TabIndex = 2;
+            this.TxtGreenGoals.TabIndex = 3;
             this.TxtGreenGoals.Text = "5";
             this.TxtGreenGoals.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -355,7 +361,7 @@
             this.BtnGreenDown.Location = new System.Drawing.Point(6, 267);
             this.BtnGreenDown.Name = "BtnGreenDown";
             this.BtnGreenDown.Size = new System.Drawing.Size(64, 32);
-            this.BtnGreenDown.TabIndex = 3;
+            this.BtnGreenDown.TabIndex = 4;
             this.BtnGreenDown.UseVisualStyleBackColor = true;
             this.BtnGreenDown.Click += new System.EventHandler(this.BtnGreenDown_Click);
             // 
@@ -366,7 +372,7 @@
             this.BtnGreenSetDown.Location = new System.Drawing.Point(125, 256);
             this.BtnGreenSetDown.Name = "BtnGreenSetDown";
             this.BtnGreenSetDown.Size = new System.Drawing.Size(64, 20);
-            this.BtnGreenSetDown.TabIndex = 13;
+            this.BtnGreenSetDown.TabIndex = 7;
             this.BtnGreenSetDown.UseVisualStyleBackColor = true;
             this.BtnGreenSetDown.Click += new System.EventHandler(this.BtnGreenSetDown_Click);
             // 
@@ -376,7 +382,7 @@
             this.TxtGreenSets.Location = new System.Drawing.Point(125, 216);
             this.TxtGreenSets.Name = "TxtGreenSets";
             this.TxtGreenSets.Size = new System.Drawing.Size(64, 34);
-            this.TxtGreenSets.TabIndex = 11;
+            this.TxtGreenSets.TabIndex = 6;
             this.TxtGreenSets.Text = "5";
             this.TxtGreenSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -387,18 +393,19 @@
             this.BtnGreenSetUp.Location = new System.Drawing.Point(125, 190);
             this.BtnGreenSetUp.Name = "BtnGreenSetUp";
             this.BtnGreenSetUp.Size = new System.Drawing.Size(64, 20);
-            this.BtnGreenSetUp.TabIndex = 12;
+            this.BtnGreenSetUp.TabIndex = 5;
             this.BtnGreenSetUp.UseVisualStyleBackColor = true;
             this.BtnGreenSetUp.Click += new System.EventHandler(this.BtnGreenSetUp_Click);
             // 
             // BtnResetScore
             // 
+            this.BtnResetScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnResetScore.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnResetScore.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnResetScore.Location = new System.Drawing.Point(269, 302);
+            this.BtnResetScore.Location = new System.Drawing.Point(312, 331);
             this.BtnResetScore.Name = "BtnResetScore";
-            this.BtnResetScore.Size = new System.Drawing.Size(146, 32);
-            this.BtnResetScore.TabIndex = 10;
+            this.BtnResetScore.Size = new System.Drawing.Size(98, 66);
+            this.BtnResetScore.TabIndex = 2;
             this.BtnResetScore.Text = "Reset Score";
             this.BtnResetScore.UseVisualStyleBackColor = true;
             this.BtnResetScore.Click += new System.EventHandler(this.BtnResetScore_Click);
@@ -410,7 +417,7 @@
             this.dateiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(714, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(739, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -433,7 +440,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 450);
+            this.ClientSize = new System.Drawing.Size(739, 470);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -486,7 +493,6 @@
         private Label LblBlackGoals;
         private TextBox TxtBlackTeamName2;
         private TextBox TxtGreenTeamName2;
-        private Button BtnApplyTournament;
         private Label label2;
         private TextBox TxtCompetition;
         private Label label1;
