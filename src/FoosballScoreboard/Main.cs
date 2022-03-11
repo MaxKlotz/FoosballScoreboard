@@ -59,6 +59,14 @@ namespace FoosballScoreboard.Forms
                                 _matchLoader.CurrentMatch,
                                 nameof(_matchLoader.CurrentMatch.BlackSets),
                                 true);
+            TxtTournamentName.DataBindings.Add("Text",
+                                _matchLoader.CurrentMatch,
+                                nameof(_matchLoader.CurrentMatch.TournamentName),
+                                true);
+            TxtCompetition.DataBindings.Add("Text",
+                                _matchLoader.CurrentMatch,
+                                nameof(_matchLoader.CurrentMatch.Competition),
+                                true);
         }
 
         private async void Main_Load(object sender, EventArgs e)

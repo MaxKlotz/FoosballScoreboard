@@ -21,6 +21,8 @@ public class MatchData : INotifyPropertyChangedWithChangeSet
     private string _blackTimeout = string.Empty;
     private string _blackName1 = string.Empty;
     private string _blackName2 = string.Empty;
+    private string _tournamentName = string.Empty;
+    private string _competition = string.Empty;
 
     public string GreenGoals
     {
@@ -183,6 +185,40 @@ public class MatchData : INotifyPropertyChangedWithChangeSet
             {
                 var changeset = new PropertyChangedChangeset(_blackName2, value);
                 _blackName2 = value;
+                NotifyPropertyChanged(changeset);
+            }
+        }
+    }
+
+    public string TournamentName
+    {
+        get
+        {
+            return _tournamentName;
+        }
+        set
+        {
+            if (value != _tournamentName)
+            {
+                var changeset = new PropertyChangedChangeset(_tournamentName, value);
+                _tournamentName = value;
+                NotifyPropertyChanged(changeset);
+            }
+        }
+    }
+
+    public string Competition
+    {
+        get
+        {
+            return _competition; 
+        }
+        set 
+        {
+            if (value != _competition)
+            {
+                var changeset = new PropertyChangedChangeset(_competition, value);
+                _competition = value;
                 NotifyPropertyChanged(changeset);
             }
         }

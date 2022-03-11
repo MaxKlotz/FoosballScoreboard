@@ -32,7 +32,7 @@
             this.TpTournament = new System.Windows.Forms.TabPage();
             this.BtnApplyTournament = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtCompetition = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtTournamentName = new System.Windows.Forms.TextBox();
             this.TpScore = new System.Windows.Forms.TabPage();
@@ -84,12 +84,12 @@
             // 
             this.TpTournament.Controls.Add(this.BtnApplyTournament);
             this.TpTournament.Controls.Add(this.label2);
-            this.TpTournament.Controls.Add(this.textBox1);
+            this.TpTournament.Controls.Add(this.TxtCompetition);
             this.TpTournament.Controls.Add(this.label1);
             this.TpTournament.Controls.Add(this.TxtTournamentName);
             this.TpTournament.Location = new System.Drawing.Point(4, 24);
             this.TpTournament.Name = "TpTournament";
-            this.TpTournament.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TpTournament.Padding = new System.Windows.Forms.Padding(3);
             this.TpTournament.Size = new System.Drawing.Size(694, 383);
             this.TpTournament.TabIndex = 1;
             this.TpTournament.Text = "Tournament";
@@ -116,13 +116,13 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "Competition";
             // 
-            // textBox1
+            // TxtCompetition
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(24, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(363, 32);
-            this.textBox1.TabIndex = 21;
+            this.TxtCompetition.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtCompetition.Location = new System.Drawing.Point(24, 120);
+            this.TxtCompetition.Name = "TxtCompetition";
+            this.TxtCompetition.Size = new System.Drawing.Size(363, 32);
+            this.TxtCompetition.TabIndex = 21;
             // 
             // label1
             // 
@@ -149,7 +149,7 @@
             this.TpScore.Controls.Add(this.BtnResetScore);
             this.TpScore.Location = new System.Drawing.Point(4, 24);
             this.TpScore.Name = "TpScore";
-            this.TpScore.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TpScore.Padding = new System.Windows.Forms.Padding(3);
             this.TpScore.Size = new System.Drawing.Size(694, 383);
             this.TpScore.TabIndex = 0;
             this.TpScore.Text = "Score";
@@ -488,7 +488,7 @@
         private TextBox TxtGreenTeamName2;
         private Button BtnApplyTournament;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox TxtCompetition;
         private Label label1;
         private TextBox TxtTournamentName;
     }
