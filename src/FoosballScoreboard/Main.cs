@@ -123,5 +123,10 @@ namespace FoosballScoreboard.Forms
         {
             Process.Start(_settings.DirectoryPath);
         }
+
+        private void BtnSwitchTeams_Click(object sender, EventArgs e)
+        {
+            _matchLoader.CurrentMatch.SwitchTeams();
+        }
     }
 }

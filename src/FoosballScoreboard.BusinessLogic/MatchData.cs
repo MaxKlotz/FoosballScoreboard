@@ -233,6 +233,11 @@ public class MatchData : INotifyPropertyChangedWithChangeSet
         await Task.FromResult(0);
     }
 
+    public void SwitchTeams()
+    {
+        (BlackName1, BlackName2, GreenName1, GreenName2) = (GreenName1, GreenName2, BlackName1, BlackName2);
+    }
+
     private void NotifyPropertyChanged(PropertyChangedChangeset changeset, [CallerMemberName] string propertyName = "")
     {
         PropertyChangedWithChangeset?.Invoke(this, new PropertyChangedWithChangesetEventArgs(propertyName, changeset));

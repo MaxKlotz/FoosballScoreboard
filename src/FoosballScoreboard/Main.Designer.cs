@@ -481,8 +481,9 @@
             this.BtnSwitchTeams.Name = "BtnSwitchTeams";
             this.BtnSwitchTeams.Size = new System.Drawing.Size(140, 110);
             this.BtnSwitchTeams.TabIndex = 3;
-            this.BtnSwitchTeams.Text = "Reset Score";
+            this.BtnSwitchTeams.Text = "Switch Teams";
             this.BtnSwitchTeams.UseVisualStyleBackColor = true;
+            this.BtnSwitchTeams.Click += new System.EventHandler(this.BtnSwitchTeams_Click);
             // 
             // Main
             // 
